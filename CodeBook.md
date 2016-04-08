@@ -18,6 +18,7 @@ Here follows a description of what all_data looks like.
 
 The first variable subject denotes the subject number that performed an activity. In total there are 30 subjects.
 The second variable activity denotes the activity performed by the subject. There are six activites, as follows
+
 WALKING
 WALKING_UPSTAIRS
 WALKING_DOWNSTAIRS
