@@ -18,18 +18,11 @@ Here follows a description of what all_data looks like.
 
 The first variable subject denotes the subject number that performed an activity. In total there are 30 subjects.
 The second variable activity denotes the activity performed by the subject. There are six activites, as follows
-
-
 WALKING
-
 WALKING_UPSTAIRS
-
 WALKING_DOWNSTAIRS
-
 SITTING
-
 STANDING
-
 LAYING
 A total of 66 features were selected from the original data: only the estimated mean and standard deviations, using a grep on "mean|std". These features form the 66 other variables in the dataset, making a total of 68 columns. The feature names from the original data have been rewritten, using the following rules:
 
