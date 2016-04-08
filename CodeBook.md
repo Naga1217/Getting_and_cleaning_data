@@ -1,13 +1,10 @@
 Code book:
-
 This document provides information about the generated sets by the script run_analysis.R, provided in this repository.
 
 Data sets
-
 The output datasets are all_data,tidy_data. The first one, all_data is the result of a cleaning and selection of the data described in Original data set. 
 
 The second one, tidy_data is the result of an aggregation of all_data
-
 Data set all_data
 
 The dataset all_data is the result of cleaning and selecting data from data from an experiment in which measurements were collected from the accelerometer and gyroscope from the Samsung Galaxy S smartphone used by 30 subjects carrying out a variety of 6 activities. More information about the measurements in the raw dataset is best obtained from the website where the dataset was taken from:
@@ -25,6 +22,7 @@ WALKING_DOWNSTAIRS
 SITTING
 STANDING
 LAYING
+
 A total of 66 features were selected from the original data: only the estimated mean and standard deviations, using a grep on "mean|std". These features form the 66 other variables in the dataset, making a total of 68 columns. The feature names from the original data have been rewritten, using the following rules:
 
 The prefix t was rewritten into time, to make it clear the feature corresponds to the time domain
