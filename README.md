@@ -3,6 +3,7 @@ COURSERA assignment
 
 Step1:
 Merge training and test datasets to create one dataset
+
 Training data: X_train,y_train and subject_train
 Test data    : X_test,y_test   and subject_test
 
