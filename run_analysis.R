@@ -73,6 +73,12 @@ cols <- colnames(all_data)
  }
  ## set the newly created column names to final data
  colnames(all_data) <- cols
+ ##Wrtie the first tidy dataset to local drive
+ write.table(all_data,"all_data.txt",sep=",")
+ #######################################################
+ Second tidy data set with the average of each variable for each activity and each subject.
+ #######################################################
+ 
  
 
 
