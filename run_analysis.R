@@ -23,7 +23,7 @@ x_test <- read.table("test/X_test.txt")
 y_test <- read.table("test/y_test.txt")
 subject_test <- read.table("test/subject_test.txt")
 #######################################################
-##create datasets in R
+##create test and training datasets in R
 #######################################################
 ##Create x_data or observations data 
 x_data <- rbind(x_train,x_test)
@@ -57,5 +57,11 @@ names(x_data) <- features[mean_sd,2]
 all_data <- cbind(subject_data,y_data,x_data)
 ################################################
 ## use descriptive activity names to name the acitivities in the dataset
+################################################
+y_data[,1] <- activities[y_data[,1],2]
+##Recreate the all_data
+all_data <- cbind(subject_data,y_data,x_data)
+###############################################
+
 
 
