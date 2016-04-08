@@ -76,9 +76,11 @@ cols <- colnames(all_data)
  ##Wrtie the first tidy dataset to local drive
  write.table(all_data,"all_data.txt",sep=",")
  #######################################################
- Second tidy data set with the average of each variable for each activity and each subject.
+ ##Second tidy data set with the average of each variable for each activity and each subject.
  #######################################################
- 
- 
+ tidy_data = ddply(all_data, c("subject","activity"), numcolwise(mean))
+ ##write the second dataset in to local drive
+ write.table(tidy_data,"tidy_data.txt",sep="\t")
+ ######################################################
 
 
