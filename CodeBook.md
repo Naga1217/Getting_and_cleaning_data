@@ -4,22 +4,32 @@ This document provides information about the generated sets by the script run_an
 
 Data sets
 
-The output datasets are all_data,tidy_data. The first one, all_data is the result of a cleaning and selection of the data described in Original data set. The second one, tidy_data is the result of an aggregation of all_data
+The output datasets are all_data,tidy_data. The first one, all_data is the result of a cleaning and selection of the data described in Original data set. 
+
+The second one, tidy_data is the result of an aggregation of all_data
 
 Data set all_data
 
-The dataset all_data is the result of cleaning and selecting data from data from an experiment in which measurements were collected from the accelerometer and gyroscope from the Samsung Galaxy S smartphone used by 30 subjects carrying out a variety of 6 activities. More information about the measurements in the raw dataset is best obtained from the website where the dataset was taken from: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones For your convenience we have included information about the original data in the section Original data set.
+The dataset all_data is the result of cleaning and selecting data from data from an experiment in which measurements were collected from the accelerometer and gyroscope from the Samsung Galaxy S smartphone used by 30 subjects carrying out a variety of 6 activities. More information about the measurements in the raw dataset is best obtained from the website where the dataset was taken from:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones For your convenience we have included information about the original data in the section Original data set.
 
 Here follows a description of what all_data looks like.
 
 The first variable subject denotes the subject number that performed an activity. In total there are 30 subjects.
 The second variable activity denotes the activity performed by the subject. There are six activites, as follows
 
+
 WALKING
+
 WALKING_UPSTAIRS
+
 WALKING_DOWNSTAIRS
+
 SITTING
+
 STANDING
+
 LAYING
 A total of 66 features were selected from the original data: only the estimated mean and standard deviations, using a grep on "mean|std". These features form the 66 other variables in the dataset, making a total of 68 columns. The feature names from the original data have been rewritten, using the following rules:
 
