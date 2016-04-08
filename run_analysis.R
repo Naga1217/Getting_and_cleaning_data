@@ -35,8 +35,6 @@ setnames(y_data,"V1","activity")
 subject_data <- rbind(subject_train,subject_test)
 ##Rename the column with proper variable name
  setnames(subject_data,"V1","subject")
-##Rename the column with proper variable name
-setnames(subject_data,"V1","subject")
 ###################################################
 ##Merge training and test datasets
 ###################################################
@@ -62,6 +60,19 @@ y_data[,1] <- activities[y_data[,1],2]
 ##Recreate the all_data
 all_data <- cbind(subject_data,y_data,x_data)
 ###############################################
-
+##Appropiately label the dataset with descriptive variabel names
+##############################################
+##some varialbe names in dataset are not proper
+cols <- colnames(all_data)
+ for(i in 1:length(cols))
+ {
+ cols[i] = gsub("\\()","",cols[i])
+ cols[i] = gsub("^t","time",cols[i])
+ cols[i] = gsub("^f","freq",cols[i])
+ cols[i] = gsub("BodyBody","Body",cols[i])
+ }
+ ## set the newly created column names to final data
+ colnames(all_data) <- cols
+ 
 
 
