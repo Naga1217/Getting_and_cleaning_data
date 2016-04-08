@@ -12,7 +12,7 @@ Here are the data for the project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 After dowloading the files manually or using download.file, 
 
-##Read the data in to R 
+##Read the test and training data in to R 
 #######################################################
 ##Read training data in to R 
 x_train <- read.table("train/X_train.txt")
@@ -37,10 +37,25 @@ subject_data <- rbind(subject_train,subject_test)
  setnames(subject_data,"V1","subject")
 ##Rename the column with proper variable name
 setnames(subject_data,"V1","subject")
-####################################################
+###################################################
 ##Merge training and test datasets
-####################################################
+###################################################
 all_data <- cbind(subject_data,y_data,x_data)
 ###################################################
+##Extract only Mean and std measurments
+##################################################
+##Read fetaures data in to R
+features <- read.table("features.txt")
+##Rename to appropiate column names in features
+names(features) <- c("featureNum","featureName")
+mean_sd <- grep("mean\\(\\)|std\\(\\)",features[,2])
+## subset only mean and sd for x_data
+x_data <- x_data[,mean_sd]
+##rename x_data with correct column names
+names(x_data) <- features[mean_sd,2]
+##Recreate the all_data after selecting only mean and sd
+all_data <- cbind(subject_data,y_data,x_data)
+################################################
+## use descriptive activity names to name the acitivities in the dataset
 
 
