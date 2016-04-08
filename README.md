@@ -1,11 +1,8 @@
 # Getting_and_cleaning_data
 COURSERA assignment
 Step1:
-
 Merge training and test datasets to create one dataset
-
 Training data: X_train,y_train and subject_train
-
 Test data    : X_test,y_test   and subject_test
 Step2:
 Extract only Measurements Mean and SD for each measurment
