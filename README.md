@@ -10,10 +10,12 @@ Test data    : X_test,y_test   and subject_test
 
 Step2:
 Extract only Measurements Mean and SD for each measurment
+
 features data: It has measurment label information
 
 Step3:
 Use Descriptive acitivity names to name the acitivities in the dataset
+
 activity_lables: It has this acitivity labels information
 
 Step4:
