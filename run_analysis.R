@@ -81,9 +81,10 @@ cols <- colnames(all_data)
  #######################################################
  ##Second tidy data set with the average of each variable for each activity and each subject.
  #######################################################
+ library(plyr)
  tidy_data = ddply(all_data, c("subject","activity"), numcolwise(mean))
  ##write the second dataset in to local drive
- write.table(tidy_data,"tidy_data.txt",sep="\t")
+ write.table(tidy_data,"tidy_data.txt",row.name=FALSE,sep="\t")
  ######################################################
 
 
