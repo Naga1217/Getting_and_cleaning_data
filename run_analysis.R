@@ -58,6 +58,7 @@ all_data <- cbind(subject_data,y_data,x_data)
 ################################################
 ## use descriptive activity names to name the acitivities in the dataset
 ################################################
+activities <- read.table("activity_labels.txt")
 y_data[,1] <- activities[y_data[,1],2]
 ##Recreate the all_data
 all_data <- cbind(subject_data,y_data,x_data)
